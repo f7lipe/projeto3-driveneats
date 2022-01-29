@@ -36,7 +36,7 @@
             <div class="dishes">
                 <!-- Prato -->
                 <article class="dish">
-                    <div class="card">
+                    <div class="card" id="food_1" onclick="selectDish(this.id)">
                         <!-- Imagem -->
                         <div class="image">
                             <img src="https://institucional.hortifruti.com.br/wp-content/uploads/2021/06/Banner-Yakisoba-vegetariano.jpg"
@@ -48,45 +48,32 @@
                             <!-- Descrição -->
                             <h2 id="description">Yakisoba com vegetais frescos.</h2>
                             <!-- Preço -->
-                            <h3 id="price">R$:25,80</h3>
+                            <div class="price-tag">
+                                <h3 id="price">R$:25,80</h3>
+                                <ion-icon name="checkmark-circle"></ion-icon>
+                            </div>
                         </div>
                     </div>
                 </article>
 
                 <!-- Prato -->
                 <article class="dish">
-                    <div class="card">
+                    <div class="card" id="food_2" onclick="selectDish(this.id)">
                         <!-- Imagem -->
                         <div class="image">
-                            <img src="https://truffle-assets.imgix.net/14bd9e85-acaraje_l_thumb.jpg"
-                                alt="prato: Acarajé">
+                            <img src="https://institucional.hortifruti.com.br/wp-content/uploads/2021/06/Banner-Yakisoba-vegetariano.jpg"
+                                alt="prato: yakisoba vegetariano">
                         </div>
                         <div class="text">
                             <!-- Nome do ítem -->
-                            <h1 id="item">Acarajé</h1>
+                            <h1 id="item">Yakisoba veg</h1>
                             <!-- Descrição -->
-                            <h2 id="description">+ pimenta e camarão de água salgada.</h2>
+                            <h2 id="description">Yakisoba com vegetais frescos.</h2>
                             <!-- Preço -->
-                            <h3 id="price">R$:13,00</h3>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Prato -->
-                <article class="dish">
-                    <div class="card">
-                        <!-- Imagem -->
-                        <div class="image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3bLLR4xeHr30h7h5M0PvCV8LfS5Fm0jVV3Q&usqp=CAU"
-                                alt="prato: Nhoque de abóbora">
-                        </div>
-                        <div class="text">
-                            <!-- Nome do ítem -->
-                            <h1 id="item">Nhoque de abóbora</h1>
-                            <!-- Descrição -->
-                            <h2 id="description">Acompanha arroz e ervas.</h2>
-                            <!-- Preço -->
-                            <h3 id="price">R$:35,00</h3>
+                            <div class="price-tag">
+                                <h3 id="price">R$:25,80</h3>
+                                <ion-icon name="checkmark-circle"></ion-icon>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -102,7 +89,7 @@
             <div class="drinks">
                 <!-- Bebida -->
                 <article class="drink">
-                    <div class="card">
+                    <div class="card" id="drink1" onclick="selectDrink(this.id)">
                         <!-- Imagem -->
                         <div class="image">
                             <img src="https://www.meioemensagem.com.br/wp-content/uploads/2020/01/banner-coca-760x435.jpg"
@@ -130,7 +117,7 @@
             <div class="desserts">
                 <!-- Sobremesa -->
                 <article class="dessert">
-                    <div class="card">
+                    <div class="card" id="dessert1" onclick="selectDessert(this.id)">
                         <!-- Imagem -->
                         <div class="image">
                             <img src="https://uploads.metropoles.com/wp-content/uploads/2019/12/02153450/pudim-vegano-de-chocolate-600x400.jpg"
@@ -158,6 +145,8 @@
 
     <!-- JavaScript -->
     <script src="js/scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
