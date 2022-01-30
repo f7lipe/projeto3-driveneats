@@ -1,8 +1,13 @@
+let dishName = '' 
+let drinkName = ''
+let dessertName = ''
+
 let dishPrice = 0
 let drinkPrice = 0
 let dessertPrice = 0
 
-function selectDish(id, priceID){
+
+function selectDish(id, dishID, priceID){
     const selection = document.querySelector('.dishes .dish .selection')
     if (selection !== null){
         selection.classList.remove('selection')
@@ -11,11 +16,12 @@ function selectDish(id, priceID){
     const selected = document.getElementById(id)
     selected.classList.add('selection')
 
-    dishPrice = document.getElementById(priceID).innerHTML.replace('R$:', '').replace(',', '.')
+    dishName = document.getElementById(dishID).innerHTML
+    dishPrice = document.getElementById(priceID).innerHTML
     verify()
 }
 
-function selectDrink(id, priceID){
+function selectDrink(id, drinkID,priceID){
     let selection = document.querySelector('.drinks .drink .selection')
     if (selection !== null){
         selection.classList.remove('selection')
@@ -24,11 +30,12 @@ function selectDrink(id, priceID){
     let selected = document.getElementById(id)
     selected.classList.add('selection')
 
-    drinkPrice = document.getElementById(priceID).innerHTML.replace('R$:', '').replace(',', '.')
+    drinkName = document.getElementById(drinkID).innerHTML
+    drinkPrice = document.getElementById(priceID).innerHTML.replace('R$', '').replace(',', '.')
     verify()
 }
 
-function selectDessert(id, priceID){
+function selectDessert(id, dessertID, priceID){
     let selection = document.querySelector('.desserts .dessert .selection')
     if (selection !== null){
         selection.classList.remove('selection')
@@ -37,8 +44,13 @@ function selectDessert(id, priceID){
     let selected = document.getElementById(id)
     selected.classList.add('selection')
 
-    dessertPrice = document.getElementById(priceID).innerHTML.replace('R$:', '').replace(',', '.')
+    dessertName = document.getElementById(dessertID).innerHTML
+    dessertPrice = document.getElementById(priceID).innerHTML.replace('R$', '').replace(',', '.')
     verify()
+}
+
+function total(item1, item2, item3){
+    return (Number(item1) + Number(item2) + Number(item3))
 }
 
 function verify(){
@@ -50,3 +62,15 @@ function verify(){
     }
 }
 
+function checkout(){
+    const formatedDishPrice = dishPrice.replace('R$', '').replace(',', '.')
+    const formatedDrinkPrice = drinkPrice.replace('R$', '').replace(',', '.')
+    const formatedDessertPrice = dessertPrice.replace('R$', '').replace(',', '.')
+    const order = `Olá, gostaria de fazer o pedido: \n
+    - Prato: ${dishName} \n
+    - Bebida: ${drinkName} \n
+    - Sobremesa: ${dessertName} \n
+    Total: R$ ${total(formatedDessertPrice, formatedDrinkPrice, formatedDishPrice)}
+    `
+    window.open("https://wa.me/5575998651973?text="+encodeURI(order));
+}

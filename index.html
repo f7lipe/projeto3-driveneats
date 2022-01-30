@@ -36,7 +36,7 @@
             <div class="dishes">
                 <!-- Prato -->
                 <article class="dish">
-                    <div class="card" id="food_1" onclick="selectDish(this.id, 'price-food1')">
+                    <div class="card" id="food_1" onclick="selectDish(this.id, 'yakisoba', 'price-food1')">
                         <!-- Imagem -->
                         <div class="image">
                             <img src="https://institucional.hortifruti.com.br/wp-content/uploads/2021/06/Banner-Yakisoba-vegetariano.jpg"
@@ -44,12 +44,12 @@
                         </div>
                         <div class="text">
                             <!-- Nome do ítem -->
-                            <h1 id="item">Yakisoba veg</h1>
+                            <h1 id="yakisoba">Yakisoba veg</h1>
                             <!-- Descrição -->
                             <h2 id="description">Yakisoba com vegetais frescos.</h2>
                             <!-- Preço -->
                             <div class="price-tag">
-                                <h3 id="price-food1">R$: 26,00</h3>
+                                <h3 id="price-food1"> R$ 26,00</h3>
                                 <ion-icon name="checkmark-circle"></ion-icon>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                             <h2 id="description">Yakisoba com vegetais frescos.</h2>
                             <!-- Preço -->
                             <div class="price-tag">
-                                <h3 id="price-food2">R$: 25,80</h3>
+                                <h3 id="price-food2"> R$ 25,80</h3>
                                 <ion-icon name="checkmark-circle"></ion-icon>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
             <div class="drinks">
                 <!-- Bebida -->
                 <article class="drink">
-                    <div class="card" id="drink1" onclick="selectDrink(this.id, 'price-drink1')">
+                    <div class="card" id="drink1" onclick="selectDrink(this.id, 'coca-zero', 'price-drink1')">
                         <!-- Imagem -->
                         <div class="image">
                             <img src="https://www.meioemensagem.com.br/wp-content/uploads/2020/01/banner-coca-760x435.jpg"
@@ -97,11 +97,11 @@
                         </div>
                         <div class="text">
                             <!-- Nome do ítem -->
-                            <h1 id="item">Coca zero</h1>
+                            <h1 id="coca-zero">Coca zero</h1>
                             <!-- Descrição -->
                             <h2 id="description">Lata 350 ml</h2>
                             <!-- Preço -->
-                            <h3 id="price-drink1">R$: 5,13</h3>
+                            <h3 id="price-drink1"> R$ 5,13</h3>
                         </div>
                     </div>
                 </article>
@@ -117,7 +117,7 @@
             <div class="desserts">
                 <!-- Sobremesa -->
                 <article class="dessert">
-                    <div class="card" id="dessert1" onclick="selectDessert(this.id, 'price-dessert1')">
+                    <div class="card" id="dessert1" onclick="selectDessert(this.id, 'pudim', 'price-dessert1')">
                         <!-- Imagem -->
                         <div class="image">
                             <img src="https://uploads.metropoles.com/wp-content/uploads/2019/12/02153450/pudim-vegano-de-chocolate-600x400.jpg"
@@ -125,11 +125,11 @@
                         </div>
                         <div class="text">
                             <!-- Nome do ítem -->
-                            <h1 id="item">Pudim</h1>
+                            <h1 id="pudim">Pudim</h1>
                             <!-- Descrição -->
                             <h2 id="description">Pudim vegano de chocolate</h2>
                             <!-- Preço -->
-                            <h3 id="price-dessert1">R$: 7,31</h3>
+                            <h3 id="price-dessert1"> R$ 7,31</h3>
                         </div>
                     </div>
                 </article>
@@ -140,8 +140,38 @@
     </main>
     <!-- Confirmar pedido -->
     <footer>
-        <button class="finish-btn" disabled>Selecione os 3 itens para fechar o pedido</button>
+        <button class="finish-btn" disabled onclick="checkout()">Selecione os 3 itens para fechar o pedido</button>
     </footer>
+
+    <!--Checkout
+    <section class="checkout">
+        <div class="summary">
+            <div class="summary-title">Confirme seu pedido</div>
+            <div class="summary-items">
+                <div class="summary-item">
+                    <div id="dish-name">Nome do prato</div>
+                    <div id="dish-price">--</div>
+                </div>
+                <div class="summary-item">
+                    <span id="drink-name">Nome da bebida</span>
+                    <span id="drink-price">--</span>
+                </div>
+                <div class="summary-item">
+                    <span id="dessert-name">Nome da sobremesa</span>
+                    <span id="dessert-price">--</span>
+                </div>
+                <div class="summary-item">
+                    <span class="total">TOTAL</span>
+                    <span id="total">R$ </span>
+                </div>
+            </div>
+            <div class="summary-buttons">
+                <button class="checkout-btn">Tudo certo, pode pedir!</button>
+                <button class="cancel-btn">Cancelar</button>
+            </div>
+        </div>
+    </section>
+    -->
 
     <!-- JavaScript -->
     <script src="js/scripts.js"></script>
