@@ -44,10 +44,6 @@ header {
     font-size: 18px;
 }
 
-.dish{
-    padding: 14px;
-}
-
 /* Card */
 .card{
     width: 172px;
@@ -138,7 +134,7 @@ footer{
 }
 
 footer button{
-    background: #CBCBCB;
+    background: #32B72F;
     width: 364px;
     height: 61px;
     border-radius: 52px;
@@ -147,4 +143,8 @@ footer button{
     font-weight: 400;
     color: #FFFFFF;
     border:none;
+}
+
+footer button :disabled, button[disabled]{
+    background: #CBCBCB;
 }
