@@ -8,7 +8,7 @@ let dessertPrice = 0
 
 
 function selectDish(id, dishID, priceID){
-    const selection = document.querySelector('.dishes .dish .selection')
+    const selection = document.querySelector('.dishes .selection')
     if (selection !== null){
         selection.classList.remove('selection')
     }
@@ -22,7 +22,7 @@ function selectDish(id, dishID, priceID){
 }
 
 function selectDrink(id, drinkID,priceID){
-    let selection = document.querySelector('.drinks .drink .selection')
+    let selection = document.querySelector('.drinks .selection')
     if (selection !== null){
         selection.classList.remove('selection')
     }
@@ -36,7 +36,7 @@ function selectDrink(id, drinkID,priceID){
 }
 
 function selectDessert(id, dessertID, priceID){
-    let selection = document.querySelector('.desserts .dessert .selection')
+    let selection = document.querySelector('.desserts .selection')
     if (selection !== null){
         selection.classList.remove('selection')
     }

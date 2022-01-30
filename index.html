@@ -29,14 +29,14 @@
     <!-- Items -->
     <main>
         <!--Seção de comidas-->
-        <section>
+        <section data-identifier="dishes" >
             <!-- Título da seção -->
             <h1>Primeiro, seu prato</h1>
             <!-- Pratos -->
             <div class="dishes">
                 <!-- Prato -->
-                <article class="dish">
-                    <div class="card" id="food_1" onclick="selectDish(this.id, 'yakisoba', 'price-food1')">
+                <article class="dish" data-identifier="food-option" id="food_1" onclick="selectDish(this.id, 'yakisoba', 'price-food1')"> 
+                    <div class="card">
                         <!-- Imagem -->
                         <div class="image">
                             <img src="https://institucional.hortifruti.com.br/wp-content/uploads/2021/06/Banner-Yakisoba-vegetariano.jpg"
@@ -44,12 +44,12 @@
                         </div>
                         <div class="text">
                             <!-- Nome do ítem -->
-                            <h1 id="yakisoba">Yakisoba veg</h1>
+                            <h1 id="yakisoba" data-identifier="food-title">Yakisoba veg</h1>
                             <!-- Descrição -->
                             <h2 id="description">Yakisoba com vegetais frescos.</h2>
                             <!-- Preço -->
                             <div class="price-tag">
-                                <h3 id="price-food1"> R$ 26,00</h3>
+                                <h3 id="price-food1" data-identifier="food-price"> R$ 33,13</h3>
                                 <ion-icon name="checkmark-circle"></ion-icon>
                             </div>
                         </div>
@@ -57,21 +57,21 @@
                 </article>
 
                 <!-- Prato -->
-                <article class="dish">
-                    <div class="card" id="food_2" onclick="selectDish(this.id, 'price-food2')">
+                <article class="dish" data-identifier="food-option" id="food_2" onclick="selectDish(this.id, 'risoto','price-food2')">
+                    <div class="card">
                         <!-- Imagem -->
                         <div class="image">
-                            <img src="https://institucional.hortifruti.com.br/wp-content/uploads/2021/06/Banner-Yakisoba-vegetariano.jpg"
-                                alt="prato: yakisoba vegetariano">
+                            <img src="https://images.aws.nestle.recipes/resized/ca29893d7251d4fdf16adbe2f436c23f_risoto-delicioso-frango-receitas-nestle_1200_600.jpg"
+                                alt="prato: risoto">
                         </div>
                         <div class="text">
                             <!-- Nome do ítem -->
-                            <h1 id="item">Yakisoba veg</h1>
+                            <h1 id="risoto" data-identifier="food-title">Risoto</h1>
                             <!-- Descrição -->
-                            <h2 id="description">Yakisoba com vegetais frescos.</h2>
+                            <h2 id="description">Ingredientes especiais do Brasil</h2>
                             <!-- Preço -->
                             <div class="price-tag">
-                                <h3 id="price-food2"> R$ 25,80</h3>
+                                <h3 id="price-food2" data-identifier="food-price"> R$ 35,13</h3>
                                 <ion-icon name="checkmark-circle"></ion-icon>
                             </div>
                         </div>
@@ -82,14 +82,14 @@
         </section>
 
         <!-- Seção de bebidas-->
-        <seciton class="drinks">
+        <seciton data-identifier="drinks">
             <!-- Título da seção -->
             <h1>Agora, sua bebida</h1>
             <!-- Bebidas -->
             <div class="drinks">
                 <!-- Bebida -->
-                <article class="drink">
-                    <div class="card" id="drink1" onclick="selectDrink(this.id, 'coca-zero', 'price-drink1')">
+                <article class="drink" data-identifier="food-option" id="drink1" onclick="selectDrink(this.id, 'coca-zero', 'price-drink1')">
+                    <div class="card">
                         <!-- Imagem -->
                         <div class="image">
                             <img src="https://www.meioemensagem.com.br/wp-content/uploads/2020/01/banner-coca-760x435.jpg"
@@ -97,11 +97,36 @@
                         </div>
                         <div class="text">
                             <!-- Nome do ítem -->
-                            <h1 id="coca-zero">Coca zero</h1>
+                            <h1 id="coca-zero" data-identifier="food-title">Coca zero</h1>
                             <!-- Descrição -->
                             <h2 id="description">Lata 350 ml</h2>
                             <!-- Preço -->
-                            <h3 id="price-drink1"> R$ 5,13</h3>
+                            <div class="price-tag">
+                            <h3 id="price-drink1" data-identifier="food-price"> R$ 5,13</h3>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Bebida -->
+                <article class="drink" data-identifier="food-option" id="drink2" onclick="selectDrink(this.id, 'suco-verde', 'price-drink2')">
+                    <div class="card">
+                        <!-- Imagem -->
+                        <div class="image">
+                            <img src="https://blog.alelo.com.br/wp-content/uploads/2019/01/Suco_Detox.jpg"
+                                alt="bebida: suco-verde 500 ml">
+                        </div>
+                        <div class="text">
+                            <!-- Nome do ítem -->
+                            <h1 id="suco-verde" data-identifier="food-title"> Suco verde</h1>
+                            <!-- Descrição -->
+                            <h2 id="description">Copo 500 ml</h2>
+                            <!-- Preço -->
+                            <div class="price-tag">
+                            <h3 id="price-drink2" data-identifier="food-price"> R$ 13,13</h3>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -110,14 +135,14 @@
         </seciton>
 
         <!-- Seção de sobremesas-->
-        <section>
+        <section data-identifier="desserts">
             <!-- Título da seção -->
             <h1>Por fim, sua sobremesa</h1>
             <!-- Sobremesas -->
             <div class="desserts">
                 <!-- Sobremesa -->
-                <article class="dessert">
-                    <div class="card" id="dessert1" onclick="selectDessert(this.id, 'pudim', 'price-dessert1')">
+                <article class="dessert" data-identifier="food-option" id="dessert1" onclick="selectDessert(this.id, 'pudim', 'price-dessert1')">
+                    <div class="card">
                         <!-- Imagem -->
                         <div class="image">
                             <img src="https://uploads.metropoles.com/wp-content/uploads/2019/12/02153450/pudim-vegano-de-chocolate-600x400.jpg"
@@ -125,11 +150,58 @@
                         </div>
                         <div class="text">
                             <!-- Nome do ítem -->
-                            <h1 id="pudim">Pudim</h1>
+                            <h1 id="pudim" data-identifier="food-title">Pudim</h1>
                             <!-- Descrição -->
                             <h2 id="description">Pudim vegano de chocolate</h2>
                             <!-- Preço -->
-                            <h3 id="price-dessert1"> R$ 7,31</h3>
+                            <div class="price-tag">
+                            <h3 id="price-dessert1" data-identifier="food-price"> R$ 2,13</h3>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sobremesa -->
+                <article class="dessert" data-identifier="food-option" id="dessert2" onclick="selectDessert(this.id, 'mousse', 'price-dessert2')">
+                    <div class="card">
+                        <!-- Imagem -->
+                        <div class="image">
+                            <img src="https://static.clubedaanamariabraga.com.br/wp-content/uploads/2019/06/mousse-de-maracuja-facil-e-pratica.jpg"
+                                alt="sobremesa: mousse">
+                        </div>
+                        <div class="text">
+                            <!-- Nome do ítem -->
+                            <h1 id="mousse" data-identifier="food-title">Mousse</h1>
+                            <!-- Descrição -->
+                            <h2 id="description">Com maracujás orgânicos</h2>
+                            <!-- Preço -->
+                            <div class="price-tag">
+                            <h3 id="price-dessert2" data-identifier="food-price"> R$ 3,13</h3>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sobremesa -->
+                <article class="dessert" data-identifier="food-option" id="dessert3" onclick="selectDessert(this.id, 'sorvete', 'price-dessert3')">
+                    <div class="card">
+                        <!-- Imagem -->
+                        <div class="image">
+                            <img src="https://static.clubedaanamariabraga.com.br/wp-content/uploads/2020/08/sorvete-cremoso-de-limao-1024x576.jpg"
+                                alt="sobremesa: sorvete">
+                        </div>
+                        <div class="text">
+                            <!-- Nome do ítem -->
+                            <h1 id="sorvete" data-identifier="food-title">Sorvete KiÓtimo</h1>
+                            <!-- Descrição -->
+                            <h2 id="description">Feito com leite de amêndoas</h2>
+                            <!-- Preço -->
+                            <div class="price-tag">
+                            <h3 id="price-dessert3" data-identifier="food-price"> R$ 7,13</h3>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -138,6 +210,7 @@
 
         </section>
     </main>
+
     <!-- Confirmar pedido -->
     <footer>
         <button class="finish-btn" disabled onclick="checkout()">Selecione os 3 itens para fechar o pedido</button>
